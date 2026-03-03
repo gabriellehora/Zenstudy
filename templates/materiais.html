@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="conteudo">
+
+    <div class="titulo" style="margin-bottom: 10px;">{{ nivel }}</div>
+    <div class="subtitulo" style="color: var(--color-text-light); margin-bottom: 30px;">
+        {{ ano }}
+    </div>
+
+    <div class="botoes-container">
+        
+        {% for materia in materias %}
+            <div class="menu-card">
+                <a href="/estudos/{{ ano_id }}/{{ materia.id }}" class="icone-livro">
+                    {{ materia.nome }}
+                </a>
+                
+                <p>Conteúdos e aulas.</p> 
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

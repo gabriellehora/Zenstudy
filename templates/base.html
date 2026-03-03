@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Zenstudy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="{% if session.get('tema') == 'dark' %}dark{% endif %}">
+
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">Zenstudy</a> <div class="navbar-links">
+                <a href="/menu">Painel</a>
+                <a href="/agenda">Agenda</a>
+                <a href="/pesquisa">Pesquisa</a>
+                <a href="/biblioteca">Biblioteca</a>
+                <a href="/configuracoes">Configurações</a>
+                <button id="theme-toggle" class="theme-toggle" title="Alternar Tema">🌙</button>
+                <a href="/logout">Sair</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Zenstudy</p> </footer>
+
+    {% block scripts %}{% endblock %}
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // 1. Verifica se o usuário já tem uma preferência salva ao carregar a página
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        toggleButton.textContent = '☀️'; // Muda ícone para sol
+    }
+
+    // 2. Ação do clique no botão
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        let theme = 'light';
+        
+        // Se a classe dark-mode foi adicionada, muda para tema escuro
+        if (body.classList.contains('dark-mode')) {
+            theme = 'dark';
+            toggleButton.textContent = '☀️';
+        } else {
+            toggleButton.textContent = '🌙';
+        }
+        
+        // 3. Salva a preferência no navegador para as outras páginas
+        localStorage.setItem('theme', theme);
+    });
+</script>
+</body>
+</html>

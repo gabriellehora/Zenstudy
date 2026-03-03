@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="conteudo-scroll">
+
+    <h1>Biblioteca - Assuntos</h1>
+
+    <div class="secao-titulo">Ensino Fundamental</div>
+
+    <div class="cards-container">
+        {% for ano in [
+            "1º Ano Fundamental", "2º Ano Fundamental", "3º Ano Fundamental",
+            "4º Ano Fundamental", "5º Ano Fundamental", "6º Ano Fundamental",
+            "7º Ano Fundamental", "8º Ano Fundamental", "9º Ano Fundamental"
+        ] %}
+        <div class="card">
+            <a href="/materiais/fundamental/{{ loop.index }}">
+                {{ ano }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="secao-titulo">Ensino Médio</div>
+
+    <div class="cards-container">
+        {% set anos_medio = [10, 11, 12] %}
+        {% for ano in [
+            "1º Ano Ensino Médio", "2º Ano Ensino Médio", "3º Ano Ensino Médio"
+        ] %}
+        <div class="card">
+            <a href="/materiais/medio/{{ anos_medio[loop.index0] }}">
+                {{ ano }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="secao-titulo">ENEM - Áreas do Conhecimento</div>
+
+    <div class="cards-container">
+        {% set enem_ids = [13, 14, 15, 16, 17] %}
+        
+        {% for tema in [
+            "Matemática",
+            "Linguagens e Códigos",
+            "Ciências Humanas",
+            "Ciências da Natureza",
+            "Redação"
+        ] %}
+        <div class="card">
+            <a href="/materiais/enem/{{ enem_ids[loop.index0] }}">
+                {{ tema }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

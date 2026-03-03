@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="menu-container">
+    <h1>Configurações</h1>
+
+    <a href="{{ url_for('alterar_senha') }}" class="item-config">
+        Alterar Senha
+    </a>
+
+
+    <a href="{{ url_for('editar_perfil') }}" class="item-config">
+        Editar Perfil
+    </a>
+
+    <a href="{{ url_for('sobre') }}" class="item-config">
+        Sobre o App
+    </a>
+</div>
+
+{% endblock %}
