@@ -1,0 +1,3 @@
+ZENSTUDY
+
+O ZENSTUDY é um aplicativo direcionado a estudantes, com foco no ensino médio e vestibular. O nosso site teve como inspiração diversos sites de cursinhos para entedermos como o estudo funciona. Nosso principal objetivo é fazer com que os jovens comecem a utilizar a internet e suas ferramentas de uma forma que beneficie eles, não que transforme esses "acertos" em desvantagem no futuro. Como estudantes, sabemos como a IA tem um impacto extremista em nossas atividades, e que, em longo prazo isso nos deixa em desvantagem, então, decidimos criar um aplicativo que utiliza todas as ferramentas da internet, mas para algo que nos traz vantagem nos dias atuais, e certamente nos próximo. 
