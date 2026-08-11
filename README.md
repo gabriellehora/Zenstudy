@@ -18,4 +18,4 @@ O sistema utiliza um banco de dados online, mas é preciso executar os scripts l
 1- Abra a pasta do projeto no **VS Code**.
 2-Inicie o servidor/aplicação através do seu terminal ou gerenciador de tarefas.
 3-Com a aplicação rodando, abra o seu navegador e acesse:
- http://lovaalhost:8000
+ http://localhost:8000
