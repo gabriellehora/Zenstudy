@@ -4,6 +4,7 @@ O ZENSTUDY é um aplicativo direcionado a estudantes, com foco no ensino médio 
 
 ## Pré-Requisitos
 Certifique-se de ter instalado na sua máquina o trabalhado postado aqui no Github.
+Git: https://github.com/gabriellehora/Zenstudy.
 
 ## Configuração de Banco de Dados
 
