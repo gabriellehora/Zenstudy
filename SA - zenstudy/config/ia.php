@@ -1,3 +1,7 @@
 <?php
 
-$apiKey = "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";
+$apiKey = getenv('GROQ_API_KEY');
+
+if (!$apiKey) {
+    die("Chave da API não configurada.");
+}
